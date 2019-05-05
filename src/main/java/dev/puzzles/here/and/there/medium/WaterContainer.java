@@ -14,7 +14,7 @@ package dev.puzzles.here.and.there.medium;
 
   2) This was a clean approach to simply take Math.Min and Math.Max rather than doing multiple if-else
   blocks
-  
+
  */
 public class WaterContainer {
 

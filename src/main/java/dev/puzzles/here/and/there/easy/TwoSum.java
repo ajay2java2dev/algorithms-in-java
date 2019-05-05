@@ -47,11 +47,15 @@ public class TwoSum {
     return isExists?returnArr:null;
   }
 
-  // Solution 2:
+  //Solution 2: The google solution: https://www.youtube.com/watch?v=XKu_SEDAykw
+
+  // Solution 3: To find all the index positions which could have resulted in the correct answer.
   public int[] findIndexPostions(int[] originalArray, int target) {
-    int[] returnArr = new int[2];
+    int[] returnArr = new int[originalArray.length];
+    //TODO: This is bit complicated so left for tonight - 05/04/2019
     return returnArr;
   }
+
 
   public static void main(String[] args) {
     TwoSum sum = new TwoSum();

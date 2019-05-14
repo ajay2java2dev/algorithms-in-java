@@ -26,6 +26,7 @@ public class Edit1Problem {
     int globalcount = 0;
     int count = 0;
 
+    //FIXME : DOESN"T WORK FOR ADD. SEE SAMPLE 1
     for (int i = 0; i < a.length; i++) {
       if (globalcount > 1) {
         return false;
@@ -44,8 +45,8 @@ public class Edit1Problem {
   }
 
   public static void main(String[] args) {
-    String s1 = "Gaek";
-    String s2 = "Geeks";
+    String s1 = "Pale";
+    String s2 = "Ple";
     Edit1Problem gg = new Edit1Problem();
     System.out.println(gg.is2StringOneByEdit(s1, s2));
 

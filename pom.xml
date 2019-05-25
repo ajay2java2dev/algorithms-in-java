@@ -8,11 +8,20 @@
     <artifactId>algorithms</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+<<<<<<< HEAD
    <properties>
         <maven.compiler.source>12</maven.compiler.source>
         <maven.compiler.target>12</maven.compiler.target>
     </properties>
     
+=======
+    <!-- properties didn't work out and kept complaining on build
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    -->
+>>>>>>> upstream/master
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -29,8 +38,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
+<<<<<<< HEAD
                     <source>12</source>
                     <target>12</target>
+=======
+                    <source>1.8</source>
+                    <target>1.8</target>
+>>>>>>> upstream/master
                 </configuration>
             </plugin>
         </plugins>

@@ -8,7 +8,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 //Submitted below to : https://www.hackerrank.com/challenges/ctci-ransom-note
-// Test cases passed : 21
+// Test cases passed : All
 public class TheRansomNote {
 
   // Complete the checkMagazine function below.

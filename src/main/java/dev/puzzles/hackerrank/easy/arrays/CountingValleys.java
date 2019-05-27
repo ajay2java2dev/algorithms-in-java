@@ -1,4 +1,4 @@
-package dev.puzzles.hackerrank.easy;
+package dev.puzzles.hackerrank.easy.arrays;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

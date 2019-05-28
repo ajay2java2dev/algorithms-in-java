@@ -3,15 +3,9 @@ package dev.algorithms.search;
 public class BinarySearchIteration {
 
     public int doSearchAndReturnIndex(int [] arr, int searchKey, int left, int right) {
-<<<<<<< HEAD
-
         long startTime = System.nanoTime();
         int searchIndex = -1;
 
-=======
-        long startTime = System.nanoTime();
-        int searchIndex = -1;
->>>>>>> upstream/master
         if (arr!= null && arr.length>0) {
             while (left <= right) {
 
@@ -34,10 +28,6 @@ public class BinarySearchIteration {
         } else {
             searchIndex  = -2;
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> upstream/master
         System.out.println("Time taken : " + (System.nanoTime() - startTime));
         return searchIndex;
     }

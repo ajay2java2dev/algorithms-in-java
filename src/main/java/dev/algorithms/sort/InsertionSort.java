@@ -7,6 +7,8 @@ package dev.algorithms.sort;
 	order and hence all the elements need to rearranged will result in Time Complexity of O(n ^ 2)
 */
 
+import java.util.Arrays;
+
 public class InsertionSort {
 
   // iterate multiple times and insert the least element to the front.
@@ -29,6 +31,24 @@ public class InsertionSort {
     }
   }
 
+  //https://www.geeksforgeeks.org/binary-insertion-sort/
+  public void binarySort(int array[])
+  {
+    for (int i = 1; i < array.length; i++)
+    {
+      int x = array[i];
+
+      // Find location to insert using binary search
+      int j = Math.abs(Arrays.binarySearch(array, 0, i, x) + 1);
+
+      //Shifting array to one location right
+      System.arraycopy(array, j, array, j+1, i-j);
+
+      //Placing element at its correct location
+      array[j] = x;
+    }
+  }
+
   public void printArray(int arr[]) {
     int n = arr.length;
     for (int i = 0; i < n; ++i) {
@@ -38,9 +58,14 @@ public class InsertionSort {
   }
 
   public static void main(String[] args) {
-    int[] a = {0, -1, -2, -4, 1};
     InsertionSort is = new InsertionSort();
+    int[] a = {0, -1, -2, -4, 1};
     is.sort(a);
     is.printArray(a);
+
+    int[] a1 = {0, -1, -2, -4, 1};
+    is.binarySort(a1);
+    is.printArray(a1);
+
   }
 }

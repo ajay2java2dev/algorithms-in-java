@@ -32,15 +32,17 @@ public class LargeNumberMultiplication {
 		BigInteger m = new BigInteger(String.valueOf(m1));
 
 		BigInteger b = firstValue.divide(m);
-		BigInteger a = firstValue - (b * m);
-		BigInteger d = secondValue / m;
-		BigInteger c = secondValue - (b * m);
+		BigInteger a = firstValue.subtract((b.multiply(m)));
+		BigInteger d = secondValue.divide(m);
+		BigInteger c = secondValue.subtract((b.multiply(m)));
 
 		BigInteger z0 = multiply(a, c);
-		BigInteger z1 = multiply(a+b, c+d);
+		BigInteger z1 = multiply(a.add(b), c.add(d));
 		BigInteger z2 = multiply(b, d);
 
-		return z0 + ((z1 -z0 -z2) * m) + (z2 * (long) Math.pow(10, 2*N));
+		long m2 = (long)Math.pow(10, 2*N);
+		BigInteger m2Bg = new BigInteger(String.valueOf(m2));
+		return z0.add(((z1.subtract(z0).subtract(z2)).multiply(m)).add(z2.multiply(m2Bg)));
 	}
 
   public static void main(String[] args) {

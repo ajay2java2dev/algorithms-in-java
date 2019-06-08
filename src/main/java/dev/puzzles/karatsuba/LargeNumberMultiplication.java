@@ -40,7 +40,7 @@ public class LargeNumberMultiplication {
 		BigInteger z1 = multiply(a.add(b), c.add(d));
 		BigInteger z2 = multiply(b, d);
 
-		long m2 = (long)Math.pow(10, 2*N);
+		long m2 = (long)Math.pow(10, 2 * N);
 		BigInteger m2Bg = new BigInteger(String.valueOf(m2));
 		return z0.add(((z1.subtract(z0).subtract(z2)).multiply(m)).add(z2.multiply(m2Bg)));
 	}

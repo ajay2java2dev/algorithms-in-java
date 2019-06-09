@@ -2,7 +2,7 @@ package dev.algorithms.sort;
 
 // Merge sort is a divide and conquer algorithm that was invented by John von Neumann in 1945
 // Yikes ... somebody knew this in 1945 and I am still rewriting the same thing.
-
+// Interesting fact about divide and conquer, right is always greater than left.
 import java.util.Arrays;
 
 public class MergeSort {

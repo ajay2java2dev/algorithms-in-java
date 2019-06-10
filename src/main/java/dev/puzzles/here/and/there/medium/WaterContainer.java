@@ -27,7 +27,7 @@ public class WaterContainer {
 
       maxArea = Math.max(maxArea, Math.min(height[left], height[right])) * (right - left);
 
-      System.out.println("Solution.maxArea -->> current : " + maxArea);
+      System.out.println("enova.maxArea -->> current : " + maxArea);
 
       if (height[left] < height[right]) {
         left++;

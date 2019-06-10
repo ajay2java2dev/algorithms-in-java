@@ -1,4 +1,4 @@
-package dev.puzzles.Solution;
+package dev.puzzles.enova;
 
 import java.util.*;
 
@@ -96,13 +96,14 @@ public class Solution {
 
     /*
     s = "lexicon";
-    solution =new Solution();
+    solution =new enova();
     s1 = solution.solution(s);
     System.out.println(s1);
 
     s = "e ";
-    solution =new Solution();
+    solution =new enova();
     s1 = solution.solution(s);
     System.out.println(s1);*/
   }
+
 }

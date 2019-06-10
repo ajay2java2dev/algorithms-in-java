@@ -24,7 +24,7 @@ import java.util.Map;
 
 public class TwoSum {
 
-  // Solution 1: 2 index approach
+  // enova 1: 2 index approach
   public int[] findTwoIndex(int[] originalArray, int target) {
 
   	boolean isExists = false;
@@ -47,9 +47,9 @@ public class TwoSum {
     return isExists?returnArr:null;
   }
 
-  //Solution 2: The google solution: https://www.youtube.com/watch?v=XKu_SEDAykw
+  //enova 2: The google solution: https://www.youtube.com/watch?v=XKu_SEDAykw
 
-  // Solution 3: To find all the index positions which could have resulted in the correct answer.
+  // enova 3: To find all the index positions which could have resulted in the correct answer.
   public int[] findIndexPostions(int[] originalArray, int target) {
     int[] returnArr = new int[originalArray.length];
     //TODO: This is bit complicated so left for tonight - 05/04/2019

@@ -1,7 +1,6 @@
 package dev.puzzles.amazon;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class CellEvaluate {
 
@@ -45,5 +44,10 @@ public class CellEvaluate {
 
 
 		return finalCellState;
+	}
+
+
+	public static void main(String[] args) {
+
 	}
 }

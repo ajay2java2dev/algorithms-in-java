@@ -46,7 +46,7 @@ public class Solution {
       // sort by value and then by key. Lets use Java 8 for this.
       Map<String, Integer> newVowelCountMapByValue =
           vowelCountMap.entrySet().stream()
-              .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+              .sorted((e1,e2) -> )
               .collect(
                   toMap(
                       Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
@@ -75,6 +75,8 @@ public class Solution {
               .append(" ")
               .append(time)
               .append("\n");
+        } else {
+          break;
         }
       }
 
@@ -89,7 +91,7 @@ public class Solution {
   public static void main(String[] args) {
     //
 
-    String s = "this is a sentence";
+    String s = "this is sentence aaa";
     Solution solution = new Solution();
     String s1 = solution.solution(s);
     System.out.println(s1);

@@ -46,7 +46,7 @@ public class Solution {
       // sort by value and then by key. Lets use Java 8 for this.
       Map<String, Integer> newVowelCountMapByValue =
           vowelCountMap.entrySet().stream()
-              .sorted((e1,e2) -> )
+              .sorted((e1,e2) -> e1.getValue().compareTo(e2.getValue()))
               .collect(
                   toMap(
                       Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));

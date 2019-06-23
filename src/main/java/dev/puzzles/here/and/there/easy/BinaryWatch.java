@@ -28,10 +28,14 @@ public class BinaryWatch {
 
     for (int i = 0; i <= 11; i++) {
       for (int j = 0; j <= 59; j++) {
-        int bitValue = Integer.bitCount(i * 64 + j); //TODO: Find out why 64 ???
+
+        //TODO: Find out why 64 ??? Also how does bitCount work ? My head started spinning after seeing the code.
+        int bitValue = Integer.bitCount(i * 64 + j);
+
         if (bitValue == num) {
           list.add(String.format("%d:%02d", i, j));
         }
+
       }
     }
 

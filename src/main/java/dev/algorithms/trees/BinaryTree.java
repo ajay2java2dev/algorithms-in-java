@@ -1,6 +1,6 @@
 package dev.algorithms.trees;
 
-import dev.datastructure.node.BinaryNode;
+import dev.algorithms.datastructure.node.BinaryNode;
 
 // https://www.geeksforgeeks.org/binary-tree-set-1-introduction/
 // https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/

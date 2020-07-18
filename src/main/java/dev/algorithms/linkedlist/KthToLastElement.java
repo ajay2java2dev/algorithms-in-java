@@ -1,6 +1,6 @@
 package dev.algorithms.linkedlist;
 
-import dev.datastructure.node.LinkedNode;
+import dev.algorithms.datastructure.node.LinkedNode;
 
 public class KthToLastElement {
 

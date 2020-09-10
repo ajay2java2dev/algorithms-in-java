@@ -8,7 +8,7 @@ public class LongestSubstring {
 
         int [] index = new int [128];
 
-        for (int j = 0 ; )
+
 
 
         return 0;

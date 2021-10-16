@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
+}
+
+group = 'dev.samples'
+version = '1.0-SNAPSHOT'
+description = 'algorithms'
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+allprojects {
+
+}

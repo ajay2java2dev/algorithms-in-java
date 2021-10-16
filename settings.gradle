@@ -1,0 +1,4 @@
+rootProject.name = 'algorithms'
+include 'puzzles'
+include 'basics'
+

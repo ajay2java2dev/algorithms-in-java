@@ -1,11 +1,5 @@
 package algorithms.datastructure.node;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
-@Data
-@Getter @Setter
 public class BinaryNode<T> {
 
   private T key;
@@ -14,5 +8,29 @@ public class BinaryNode<T> {
   public BinaryNode(T key) {
     this.key = key;
     this.left = this.right = null;
+  }
+
+  public T getKey() {
+    return key;
+  }
+
+  public void setKey(T key) {
+    this.key = key;
+  }
+
+  public BinaryNode getLeft() {
+    return left;
+  }
+
+  public void setLeft(BinaryNode left) {
+    this.left = left;
+  }
+
+  public BinaryNode getRight() {
+    return right;
+  }
+
+  public void setRight(BinaryNode right) {
+    this.right = right;
   }
 }

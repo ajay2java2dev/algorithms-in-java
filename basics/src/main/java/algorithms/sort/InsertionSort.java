@@ -8,6 +8,9 @@ package algorithms.sort;
 */
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class InsertionSort {
 
@@ -27,6 +30,23 @@ public class InsertionSort {
         }
 
         arr[j + 1] = keyVal;
+      }
+    }
+  }
+
+  public void simpleInsertionSort_1 (Integer [] arr) {
+    if (arr.length > 0 ) {
+      for ( int i = 1 ; i < arr.length ; i ++) {
+        for (int j = i ; j > 0 ; j --) {
+          //dont have to adjust iteration above to scan all elements
+          if (arr[j-1].compareTo(arr[j]) > 0) {
+            Integer val = arr[j-1];
+            arr[j-1] = arr[j];
+            arr[j] = val;
+          } else {
+            break;
+          }
+        }
       }
     }
   }
@@ -58,14 +78,18 @@ public class InsertionSort {
   }
 
   public static void main(String[] args) {
-    InsertionSort is = new InsertionSort();
+    InsertionSort insertionSort = new InsertionSort();
     int[] a = {0, -1, -2, -4, 1};
-    is.sort(a);
-    is.printArray(a);
+    insertionSort.sort(a);
+    insertionSort.printArray(a);
 
     int[] a1 = {0, -1, -2, -4, 1};
-    is.binarySort(a1);
-    is.printArray(a1);
+    insertionSort.binarySort(a1);
+    insertionSort.printArray(a1);
 
+    int[] a2 = {0, -1, -2, -4, 1};
+    Integer [] arr = Arrays.stream(a2).boxed().toArray(Integer[]::new);
+    insertionSort.simpleInsertionSort_1(arr);
+    Arrays.stream(arr).forEach(System.out::println);
   }
 }

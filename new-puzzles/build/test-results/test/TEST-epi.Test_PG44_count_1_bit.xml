@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="epi.Test_PG44_count_1_bit" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-12-16T15:06:26" hostname="Ajays-Mac-mini.attlocal.net" time="0.021">
-  <properties/>
-  <testcase name="testFirstMethod()" classname="epi.Test_PG44_count_1_bit" time="0.021"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -9,8 +10,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/arrays" />
-            <option value="$PROJECT_DIR$/puzzles" />
+            <option value="$PROJECT_DIR$/advanced" />
+            <option value="$PROJECT_DIR$/basics" />
+            <option value="$PROJECT_DIR$/new-puzzles" />
           </set>
         </option>
       </GradleProjectSettings>

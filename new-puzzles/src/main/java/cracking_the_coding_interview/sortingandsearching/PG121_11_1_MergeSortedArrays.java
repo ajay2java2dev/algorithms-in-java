@@ -3,8 +3,13 @@ package cracking_the_coding_interview.sortingandsearching;
 import java.util.*;
 
 /*
+11.1 - Given two sorted arrays A and B, where A has large enough buffer to hold B, merge A and B together and maintain sorted order
+Solution:
 - Basically this is compare sort.
 - Only issue with this is that if we insert elements to arr1, then we need to shift the remaining elements backwards.
+- Start comparing elements from tail for each element and set them to end of arr1 since there is space in the end of arr1.
+- There is not much to learn apart from the fact that you can keep two arrays sorted during the merge process itself instead of
+first merging them and then sorting.
 */
 public class PG121_11_1_MergeSortedArrays {
 

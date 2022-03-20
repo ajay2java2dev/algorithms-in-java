@@ -1,4 +1,4 @@
-package crackingthecodinginterview;
+package cracking_the_coding_interview;
 
 public class UniqueCharacters {
 

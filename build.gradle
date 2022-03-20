@@ -16,4 +16,4 @@ dependencies {
 group = 'dev.samples'
 version = '1.0-SNAPSHOT'
 description = 'algorithms'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_11

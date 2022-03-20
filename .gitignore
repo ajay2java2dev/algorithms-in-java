@@ -1,4 +1,11 @@
-.build
+bin
+build
+advanced/build
+advanced/bin
+basics/bin
+basics/build
+new-puzzles/bin
+new-puzzles/build
 .github
 .github
 .idea

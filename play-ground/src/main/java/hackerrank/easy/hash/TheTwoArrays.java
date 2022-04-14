@@ -4,7 +4,9 @@ package hackerrank.easy.hash;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 
 //https://www.hackerrank.com/challenges/two-strings
 //Test Cases Passed: All (By brute-force couldn't get all cases to pass due to timeout).

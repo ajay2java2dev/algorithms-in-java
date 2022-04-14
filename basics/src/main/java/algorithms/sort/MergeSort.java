@@ -4,8 +4,6 @@ package algorithms.sort;
 // Yikes ... somebody knew this in 1945 and I am still rewriting the same thing.
 // Interesting fact about divide and conquer, right is always greater than left.
 
-import java.util.Arrays;
-
 public class MergeSort {
 
     public void merge(int[] arr, int leftIndex, int middleIndex, int rightIndex) {

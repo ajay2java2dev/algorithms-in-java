@@ -1,11 +1,7 @@
  package ultimateTTT;
 
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
-
-//import ultimateTTT.PointsAndScores;
-import ultimateTTT.NMove;
+ import java.util.Random;
+ import java.util.Scanner;
 
 public class Boardgame 
 {

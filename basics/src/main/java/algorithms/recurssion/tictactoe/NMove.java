@@ -1,10 +1,8 @@
 package ultimateTTT;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import ultimateTTT.Position;
-import ultimateTTT.PosScores;
 
 public class NMove {
 	

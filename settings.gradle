@@ -1,5 +1,6 @@
 rootProject.name = 'algorithms'
 
 include 'basics'
-include 'puzzles'
 include 'advanced'
+include 'play-ground'
+

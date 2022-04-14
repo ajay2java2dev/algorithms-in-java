@@ -1,15 +1,18 @@
 package hackerrank.easy.hash;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class SherlocksAnagrams {
 
   // Complete the sherlockAndAnagrams function below.
   static int sherlockAndAnagrams(String s) {
+
     int count = 0;
     Map<String, Integer> stringMap = new HashMap();
-    Set<String> stringSet = new HashSet<>();
 
     if (s.length() > 0) {
 

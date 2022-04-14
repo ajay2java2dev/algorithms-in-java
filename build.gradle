@@ -2,18 +2,37 @@ plugins {
     id 'java'
 }
 
-repositories {
-    mavenLocal()
-    maven {
-        url = uri('https://repo.maven.apache.org/maven2/')
+group 'dev.samples'
+version '1.0-SNAPSHOT'
+description 'algorithms'
+java.sourceCompatibility = JavaVersion.VERSION_11
+
+allprojects {
+    apply plugin: 'maven-publish'
+    apply plugin: 'idea'
+
+    group this.group
+    version this.version
+
+    repositories {
+        mavenLocal()
+        maven {
+            allowInsecureProtocol = true
+            url = uri('https://repo.maven.apache.org/maven2/')
+        }
     }
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
-}
+subprojects { subproject ->
+    apply plugin: 'groovy'
 
-group = 'dev.samples'
-version = '1.0-SNAPSHOT'
-description = 'algorithms'
-java.sourceCompatibility = JavaVersion.VERSION_11
+    group rootProject.group
+    version rootProject.version
+    sourceCompatibility = JavaVersion.VERSION_11
+
+    test {
+        useJUnitPlatform()
+        maxParallelForks = 2
+        ignoreFailures = false
+    }
+}

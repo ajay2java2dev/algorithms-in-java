@@ -1,4 +1,4 @@
- package ultimateTTT;
+ package algorithms.recurssion.tictactoe;
 
  import java.util.Random;
  import java.util.Scanner;

@@ -1,4 +1,4 @@
-package ultimateTTT;
+package algorithms.recurssion.tictactoe;
 
 public class PosScores {
 	int score;

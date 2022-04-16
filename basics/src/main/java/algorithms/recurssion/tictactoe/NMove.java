@@ -1,4 +1,4 @@
-package ultimateTTT;
+package algorithms.recurssion.tictactoe;
 
 import java.util.ArrayList;
 import java.util.List;

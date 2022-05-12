@@ -1,7 +1,5 @@
-bin
-build
-*/build
-*/bin
+build/
+bin/
 
 .github
 .idea

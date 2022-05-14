@@ -6,15 +6,37 @@ import java.math.BigInteger;
 /**
  * Definition for singly-linked list.
 **/
- class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- }
+public class AddTwoNumbers {
 
-class Solution {
+    /* Below works for small soltions but not for bigger strings */
+    public ListNode bruteForceSolution(ListNode l1, ListNode l2) {
+        ListNode outNode = null;
+        if (l1 == null || l2 == null) {
+            return outNode;
+        }
+
+        StringBuilder val1Str = new StringBuilder().append(l1.val);
+        while (l1.next != null) {
+            l1 = l1.next;
+            val1Str.append(l1.val);
+        }
+        StringBuilder val2Str = new StringBuilder().append(l2.val);
+        while (l2.next != null) {
+            l2 = l2.next;
+            val2Str.append(l2.val);
+        }
+
+        long val1 = Long.parseLong(val1Str.reverse().toString());
+        long val2 = Long.parseLong(val2Str.reverse().toString());
+        String valOut = new StringBuilder().append(val1 + val2).toString();
+
+        String[] outSplit = valOut.split("");
+        for (int i = 0; i < outSplit.length; i++) {
+            Long v1 = Long.parseLong(outSplit[i]);
+            outNode = new ListNode(v1.intValue(), outNode);
+        }
+        return outNode;
+    }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0); //initial node set as dummy.
@@ -37,47 +59,29 @@ class Solution {
         return dummyHead.next;
     }
 
-    /* The above solution is good but can be better */
-    public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
-        StringBuilder build1 = new StringBuilder();
-        while (l1 != null) {
-            build1.append(l1.val);
-            l1 = l1.next;
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(3);
+        ListNode l2 = new ListNode(4, l1);
+        ListNode l3 = new ListNode(2, l2);
 
+        ListNode l4 = new ListNode(4);
+        ListNode l5 = new ListNode(6, l4);
+        ListNode l6 = new ListNode(5, l5);
+
+        AddTwoNumbers s1 = new AddTwoNumbers();
+        ListNode l7 = s1.bruteForceSolution(l3, l6);
+        while (l7.next != null) {
+            System.out.println(l7.val);
+            l7 = l7.next;
         }
-
-        StringBuilder build2 = new StringBuilder();
-        while (l2 != null) {
-            build2.append(l2.val);
-            l2 = l2.next;
-        }
-
-        System.out.println(build1.toString());
-        System.out.println(build2.toString());
-
-
-        BigInteger val1 = new BigInteger(build1.reverse().toString());
-        BigInteger val2 = new BigInteger(build2.reverse().toString());
-
-        BigInteger final12 =  val1.add(val2);
-        String final12Str = new StringBuilder().append(final12).reverse().toString();
-
-        ListNode node12 = null;
-        ListNode node12Parent = null;
-
-        for (char c : final12Str.toCharArray()) {
-
-            if (node12 == null) {
-
-                node12 = new ListNode(Integer.parseInt(""+c));
-                node12Parent = node12;
-
-            } else {
-
-                node12.next = new ListNode(Integer.parseInt(""+c));
-                node12 = node12.next;
-            }
-        }
-        return node12Parent;
+        System.out.println(l7.val);
     }
+}
+
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }

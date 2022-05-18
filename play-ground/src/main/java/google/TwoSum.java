@@ -31,6 +31,22 @@ public class TwoSum {
         return indexMap;
     }
 
+    public int[] optimalSolutionLeetCode(int[] nums, int target) {
+        int [] out = new int[2];
+        var hashMap = new HashMap<Integer,Integer>();
+        for (int i = 0; i < nums.length; i++) {
+            int numToFind = target - nums[i];
+            if (hashMap.containsKey(numToFind)) {
+                out[0] = hashMap.get(numToFind);
+                out[1] = i;
+                return out;
+            } else {
+                hashMap.put(nums[i], i);
+            }
+        }
+        return out;
+    }
+
     public static void main(String[] args) {
         int [] arr = {1,2,3,4,5,6,7};
         int target = 10;

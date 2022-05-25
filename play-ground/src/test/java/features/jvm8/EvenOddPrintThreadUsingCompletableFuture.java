@@ -10,6 +10,10 @@ public class EvenOddPrintThreadUsingCompletableFuture {
     private static IntPredicate evenPredicate = value -> value%2 == 0;
     private static IntPredicate oddPredicate = value -> value%2 != 0;
 
+
+    public EvenOddPrintThreadUsingCompletableFuture() {
+    }
+
     public static void execute(int number) {
         synchronized (object) {
             System.out.println(Thread.currentThread().getName() + " : " +number);

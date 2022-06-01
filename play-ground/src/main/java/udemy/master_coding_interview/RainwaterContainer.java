@@ -15,16 +15,27 @@ public class RainwaterContainer {
 
             while (left_pos > 0) {
                 left_pos--;
+                /*
                 if (maxLeft < heights[left_pos]) {
                     maxLeft = heights[left_pos];
                 }
+                */
+
+                //using math.max instead.
+                maxLeft = Math.max(maxLeft, heights[left_pos]);
             }
 
             while (right_pos < heights.length) {
+                /*
                 if (maxRight < heights[right_pos]) {
                     maxRight = heights[right_pos];
                 }
+                 */
+
+                //using math.max instead.
+                maxRight = Math.max(maxRight, heights[right_pos]);
                 right_pos++;
+
             }
 
             if (maxLeft < 0 || maxRight < 0) {

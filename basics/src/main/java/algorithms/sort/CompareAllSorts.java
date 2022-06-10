@@ -52,6 +52,7 @@ public class CompareAllSorts {
         }
     }
 
+    //conquer (see divide first below)
     static void conquer (int [] arr, int start, int mid, int end) {
         int [] merged = new int [end - start + 1];
 
@@ -81,6 +82,7 @@ public class CompareAllSorts {
         }
     }
 
+    //divide
     static void divide (int [] arr, int start, int end) {
 
         if (start >= end) {

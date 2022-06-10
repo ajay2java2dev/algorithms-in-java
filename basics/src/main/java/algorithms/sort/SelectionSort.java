@@ -1,5 +1,7 @@
 package algorithms.sort;
 
+import java.util.Arrays;
+
 /*
 	1) Has worst kind of sorting in the recent.
 	2) Since timecomplexity is bad, its pretty much obvious that the space complexity must be
@@ -16,19 +18,31 @@ public class SelectionSort {
 	public void sort(int arr[]) {
 		int n = arr.length;
 
-		// One by one move boundary of unsorted subarray
+		// compare to bubble sort this is just avoiding swapping every time.
 		for (int i = 0; i < n - 1; i++) {
 			// Find the minimum element in unsorted array
 			int min_idx = i;
 			for (int j = i + 1; j < n; j++) {
-				if (arr[j] < arr[min_idx]) min_idx = j;
+				if (arr[j] < arr[min_idx]) {
+					min_idx = j;
+				}
 			}
 
-			// Swap the found minimum element with the first
-			// element
+			// Finally swap for this iteration. Only difference b/w this and bubble sort is this step is outside here.
 			int temp = arr[min_idx];
 			arr[min_idx] = arr[i];
 			arr[i] = temp;
 		}
+	}
+
+	public static void main(String[] args) {
+		int[] arr = {7, 3, 1, 2, 8};
+		SelectionSort sort = new SelectionSort();
+
+		long startTime = System.nanoTime();
+		sort.sort(arr);
+		System.out.println("Time taken : " + (System.nanoTime() - startTime));
+
+		Arrays.stream(arr).forEach(System.out::println);
 	}
 }

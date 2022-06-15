@@ -1,5 +1,7 @@
 package leetcode;
 
+import org.junit.jupiter.api.Assertions;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,6 +32,7 @@ public class LongestSubStringWithoutRepeatingChars {
         return longestSubstring;
     }
 
+    //https://www.udemy.com/course/master-the-coding-interview-big-tech-faang-interviews/learn/lecture/22188586#questions/17687632
     static long optimisticLongestSubstring (String subString) {
         if (subString == null || subString.isEmpty()) {
             return 0;
@@ -37,32 +40,29 @@ public class LongestSubStringWithoutRepeatingChars {
         int longestSubString=0;
         String [] chars = subString.split("");
         Map<String, Integer> charMap = new HashMap<>();
-        int left = 0, right = 0;
+        int left = 0, currentLength =0;
 
-        int currentLength =0;
-        for (int i = 0; i < chars.length; i++) {
-            String currentChar = chars[i];
+        for (int right = 0; right < chars.length; right++) {
+            String currentChar = chars[right];
             if (!charMap.containsKey(currentChar)) {
-                charMap.put(chars[i], i);
+                charMap.put(currentChar, right);
                 currentLength++;
             } else {
-                if (charMap.get(currentChar) < left) {
-                    charMap.put(currentChar, i);
-                } else {
-                    left = charMap.get(currentChar) + 1;
-                    charMap.put(currentChar, i);
+                int prevSeenPos = charMap.get(currentChar);
+                if (prevSeenPos >= left) {
+                    left = prevSeenPos + 1;
                 }
+                charMap.put(currentChar, right);
                 currentLength = right - left + 1;
             }
             longestSubString = Math.max(longestSubString, currentLength);
-            right++;
         }
         return longestSubString;
     }
 
     public static void main(String[] args) {
-        System.out.println(countLongestSubstring("abccabb"));
-        System.out.println(optimisticLongestSubstring("abcbdaac"));
-        System.out.println(optimisticLongestSubstring("pwwkew"));
+        Assertions.assertEquals(3,countLongestSubstring("abccabb"));
+        Assertions.assertEquals(4,optimisticLongestSubstring("abcbdaac"));
+        Assertions.assertEquals(3,optimisticLongestSubstring("pwwkew"));
     }
 }

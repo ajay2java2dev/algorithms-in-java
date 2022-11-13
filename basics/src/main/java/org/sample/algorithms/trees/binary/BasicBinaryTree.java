@@ -52,11 +52,13 @@ public class BasicBinaryTree {
   }
 
   public void constructSampleBinaryTree() {
-    //ugly populating mechanism
+
     node = new BinaryNode(10,
+            //left
             new BinaryNode(5,
                     new BinaryNode(3, null, null),
                     new BinaryNode(2, null, null)),
+            //right
             new BinaryNode(30,
                     new BinaryNode(15, null, null),
                     new BinaryNode(40, null, null)));

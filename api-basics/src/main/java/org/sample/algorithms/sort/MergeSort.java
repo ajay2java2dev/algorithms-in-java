@@ -62,7 +62,9 @@ public class MergeSort {
             int middleIndex = (leftIndex + rightIndex) / 2;
 
             sort(arr, leftIndex, middleIndex); // split left and keep on splitting
+
             sort(arr, middleIndex + 1, rightIndex); // split right and keep on splitting
+
             merge(arr, leftIndex, middleIndex, rightIndex);
         }
     }

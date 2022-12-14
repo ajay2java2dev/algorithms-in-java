@@ -3,6 +3,8 @@ package org.sample.algorithms.trees.binary;
 // https://www.geeksforgeeks.org/binary-tree-set-1-introduction/
 // https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
 
+import api.core.structure.representation.BinaryNode;
+
 //1) The maximum number of nodes at level ‘l’ of a binary tree is 2^(l-1).
   //1.a)Next level would have twice nodes, i.e. 2 * 2^(l-1)
 //2) Maximum number of nodes in a binary tree of height ‘h’ is 2^h – 1. (Geometric Series)

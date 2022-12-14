@@ -1,6 +1,6 @@
 package org.sample.algorithms.linkedlist;
 
-import org.sample.structure.node.LinkedNode;
+import api.core.structure.linked.LinkedNode;
 
 import java.util.Hashtable;
 
@@ -20,6 +20,7 @@ public class DeleteDupsLinkedList {
       }
       linkedNode = linkedNode.next;
     }
+
     return previous;
   }
 

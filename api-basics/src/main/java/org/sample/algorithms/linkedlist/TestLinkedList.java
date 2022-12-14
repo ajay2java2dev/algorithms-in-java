@@ -1,5 +1,7 @@
 package org.sample.algorithms.linkedlist;
 
+import api.core.structure.representation.LinkedNode;
+
 import java.util.Arrays;
 import java.util.Stack;
 import java.util.stream.Collectors;

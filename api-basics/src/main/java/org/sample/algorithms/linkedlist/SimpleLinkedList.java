@@ -1,6 +1,7 @@
 package org.sample.algorithms.linkedlist;
 
-import org.sample.structure.node.LinkedNode;
+
+import api.core.structure.linked.LinkedNode;
 
 public class SimpleLinkedList {
 

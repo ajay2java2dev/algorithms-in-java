@@ -1,4 +1,4 @@
-package org.sample.structure.node;
+package api.core.structure.representation;
 
 public class LinkedNode {
 

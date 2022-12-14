@@ -12,7 +12,7 @@ repositories {
 dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     implementation 'org.projectlombok:lombok:1.18.24'
-    implementation project(":basics")
+    implementation project(":api-basics")
 }
 
 test {

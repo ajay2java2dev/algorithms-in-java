@@ -1,6 +1,8 @@
-rootProject.name = 'algorithms'
+rootProject.name = 'algorithms-in-java'
 
-include 'basics'
-include 'advanced'
-include 'play-ground'
+include 'api-adv-core'
+include 'api-advanced'
+include 'api-basics'
+include 'api-playground'
+
 

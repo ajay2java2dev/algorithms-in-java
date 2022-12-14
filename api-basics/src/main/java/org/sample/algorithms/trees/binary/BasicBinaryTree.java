@@ -1,7 +1,5 @@
 package org.sample.algorithms.trees.binary;
 
-import org.sample.structure.node.BinaryNode;
-
 // https://www.geeksforgeeks.org/binary-tree-set-1-introduction/
 // https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
 
